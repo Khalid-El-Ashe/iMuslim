@@ -2,6 +2,7 @@ package com.dev.imuslim.screen
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import com.dev.imuslim.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 

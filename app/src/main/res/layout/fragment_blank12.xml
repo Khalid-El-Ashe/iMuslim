@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secound_primary"
+    tools:context=".screen.fragment.items.Blank12Fragment">
+
+    <TextView
+        android:id="@+id/blank12_toolbar"
+        style="@style/ToolbarApplicationStyle"
+        android:text="مسرى رسول الله"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_back"
+        style="@style/IconToolbarStyle"
+        app:layout_constraintBottom_toBottomOf="@id/blank12_toolbar"
+        app:layout_constraintStart_toStartOf="@id/blank12_toolbar"
+        app:layout_constraintTop_toTopOf="@id/blank12_toolbar" />
+
+    <TextView
+        android:id="@+id/tv_b12"
+        style="@style/TextDuaStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blank12_toolbar"
+        tools:text="@string/test_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

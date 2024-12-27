@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/more_navigation"
+    app:startDestination="@id/moreFragment">
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.MoreFragment"
+        android:label="more_screen"
+        tools:layout="@layout/fragment_more">
+        <action
+            android:id="@+id/action_moreFragment_to_islamicOpensFragment"
+            app:destination="@id/islamicOpensFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_blank12Fragment2"
+            app:destination="@id/blank12Fragment2" />
+        <action
+            android:id="@+id/action_moreFragment_to_sonaFragment"
+            app:destination="@id/sonaFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_prophetMohammedFragment"
+            app:destination="@id/prophetMohammedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/islamicOpensFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.IslamicOpensFragment"
+        android:label="fragment_islamic_opens"
+        tools:layout="@layout/fragment_islamic_opens" />
+    <fragment
+        android:id="@+id/blank12Fragment2"
+        android:name="com.dev.imuslim.screen.fragment.items.Blank12Fragment"
+        android:label="fragment_blank12"
+        tools:layout="@layout/fragment_blank12" />
+    <fragment
+        android:id="@+id/sonaFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.SonaFragment"
+        android:label="fragment_sona"
+        tools:layout="@layout/fragment_sona" />
+    <fragment
+        android:id="@+id/prophetMohammedFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.ProphetMohammedFragment"
+        android:label="fragment_prophet_mohammed"
+        tools:layout="@layout/fragment_prophet_mohammed" />
+</navigation>

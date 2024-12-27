@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screen.fragment.items.MoreFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/more_toolbar"
+            style="@style/ToolbarApplicationStyle"
+            android:text="المزيد"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_back"
+            style="@style/IconToolbarStyle"
+            app:layout_constraintBottom_toBottomOf="@id/more_toolbar"
+            app:layout_constraintStart_toStartOf="@id/more_toolbar"
+            app:layout_constraintTop_toTopOf="@id/more_toolbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/prophet_linear"
+        style="@style/BoxMoreStyle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            style="@style/TextItemMoreStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="النبي محمد"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_navigate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sona_linear"
+        style="@style/BoxMoreStyle"
+        android:layout_width="match_parent">
+
+        <TextView
+            style="@style/TextItemMoreStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="السنة النبوية"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_navigate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aqsa_linear"
+        style="@style/BoxMoreStyle"
+        android:layout_width="match_parent">
+
+        <TextView
+            style="@style/TextItemMoreStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مسرى رسول الله"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_navigate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/opens_linear"
+        style="@style/BoxMoreStyle"
+        android:layout_width="match_parent">
+
+        <TextView
+            style="@style/TextItemMoreStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الفتوحات الاسلامية"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_navigate" />
+
+    </LinearLayout>
+
+</LinearLayout>

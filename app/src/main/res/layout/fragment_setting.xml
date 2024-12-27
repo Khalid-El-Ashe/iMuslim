@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screen.fragment.setting.SettingFragment">
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/setting_toolbar"-->
+    <!--            style="@style/ToolbarApplicationStyle"-->
+    <!--            android:text="الإعدادات"-->
+    <!--            tools:ignore="MissingConstraints" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/icon_back"-->
+    <!--            style="@style/IconToolbarStyle"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/setting_toolbar"-->
+    <!--            app:layout_constraintStart_toStartOf="@id/setting_toolbar"-->
+    <!--            app:layout_constraintTop_toTopOf="@id/setting_toolbar" />-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+    <LinearLayout style="@style/LayoutLanguageStyle">
+
+        <Spinner
+            android:id="@+id/sp_countries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            tools:listitem="@layout/languages_item" />
+
+    </LinearLayout>
+
+</LinearLayout>

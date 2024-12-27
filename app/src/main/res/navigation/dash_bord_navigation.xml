@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.dev.imuslim.screen.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.dev.imuslim.screen.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_duaFragment"
+            app:destination="@id/duaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_morningFragment"
+            app:destination="@id/morningFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_eveningFragment"
+            app:destination="@id/eveningFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sallaTimesFragment"
+            app:destination="@id/sallaTimesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_prayerCompassFragment"
+            app:destination="@id/prayerCompassFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_storiesQuranKareemFragment"
+            app:destination="@id/quranKareemFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_storiesProphetsFragment"
+            app:destination="@id/storiesProphetsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_hadithFragment"
+            app:destination="@id/hadithFragment" />
+        <!--        <action-->
+        <!--            android:id="@+id/action_homeScreen_to_settingFragment"-->
+        <!--            app:destination="@id/settingFragment" />-->
+        <action
+            android:id="@+id/action_homeFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_storiesFrindsFragment"
+            app:destination="@id/storiesFrindsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/duaFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.DuaFragment"
+        android:label="fragment_dua"
+        tools:layout="@layout/fragment_dua" />
+    <fragment
+        android:id="@+id/morningFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.MorningSaysFragment"
+        android:label="fragment_morning"
+        tools:layout="@layout/fragment_morning_says" />
+    <fragment
+        android:id="@+id/eveningFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.EveningSaysFragment"
+        android:label="fragment_evening"
+        tools:layout="@layout/fragment_evening_says" />
+    <fragment
+        android:id="@+id/sallaTimesFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.SallaTimesFragment"
+        android:label="fragment_salla_times"
+        tools:layout="@layout/fragment_salla_times" />
+    <fragment
+        android:id="@+id/prayerCompassFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.PrayerCompassFragment"
+        android:label="fragment_prayer_compass"
+        tools:layout="@layout/fragment_prayer_compass" />
+    <fragment
+        android:id="@+id/quranKareemFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.StoriesQuranKareemFragment"
+        android:label="fragment_quran_kareem"
+        tools:layout="@layout/fragment_stories_quran_kareem" />
+    <fragment
+        android:id="@+id/storiesProphetsFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.StoriesProphetsFragment"
+        android:label="fragment_stories_prophets"
+        tools:layout="@layout/fragment_stories_prophets" />
+
+    <fragment
+        android:id="@+id/hadithFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.HadithFragment"
+        android:label="fragment_hadith"
+        tools:layout="@layout/fragment_hadith" />
+    <!--    <fragment-->
+    <!--        android:id="@+id/settingFragment"-->
+    <!--        android:name="com.dev.imuslim.screen.fragment.settings.SettingScreen"-->
+    <!--        android:label="fragment_setting"-->
+    <!--        tools:layout="@layout/screen_setting" />-->
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+    <fragment
+        android:id="@+id/storiesFrindsFragment"
+        android:name="com.dev.imuslim.screen.fragment.items.StoriesFriendsFragment"
+        android:label="fragment_stories_frinds"
+        tools:layout="@layout/fragment_stories_frinds" />
+</navigation>

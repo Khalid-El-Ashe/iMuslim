@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dua_navigation"
+    app:startDestination="@id/duaScreen2">
+
+    <fragment
+        android:id="@+id/duaScreen2"
+        android:name="com.dev.imuslim.screen.fragment.items.DuaFragment"
+        android:label="screen_dua"
+        tools:layout="@layout/fragment_dua" />
+</navigation>

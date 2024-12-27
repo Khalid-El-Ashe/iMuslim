@@ -3,7 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
     id("kotlin-parcelize")
-    id ("dagger.hilt.android.plugin")
+    id("dagger.hilt.android.plugin")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -12,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.dev.imuslim"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -24,8 +25,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
     }
@@ -58,16 +58,18 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Dagger Hillt
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation (libs.androidx.hilt.lifecycle.viewmodel)
+    kapt (libs.androidx.hilt.compiler)
 
     // Retrofit & Gson
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
-    implementation("com.google.code.gson:gson:2.11.0")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.gson)
 
     // Glide
-    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.glide)
     // cash LRU
 
     // navGraph
@@ -75,8 +77,12 @@ dependencies {
     implementation(libs.androidx.navigation.ui)
     implementation(libs.androidx.navigation.dynamic.features.fragment)
     implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.lottie)
+
+    // zeugmasolutions languages
+    implementation(libs.locale.helper.android)
 }
 
 kapt {
-    correctErrorTypes = true
+    correctErrorTypes=true
 }
