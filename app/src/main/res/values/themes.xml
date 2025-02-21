@@ -3,9 +3,10 @@
     <style name="Base.Theme.Imuslim" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="statusBarBackground">@color/primary_color</item>
     </style>
 
-    <style name="Theme.Imuslim" parent="Base.Theme.Imuslim" />
+    <style name="Theme.IMuslim" parent="Base.Theme.Imuslim" />
 
     <style name="ToolbarApplicationStyle">
         <item name="android:layout_width">match_parent</item>
@@ -61,13 +62,26 @@
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginStart">10dp</item>
         <item name="android:layout_marginEnd">10dp</item>
-        <item name="android:layout_marginBottom">30dp</item>
-        <item name="android:overScrollMode">always</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:scrollbars">vertical</item>
         <item name="android:padding">8dp</item>
-        <item name="android:textSize">17sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="fontFamily">@font/ar</item>
+        <item name="android:lineSpacingExtra">16dp</item>
+        <item name="android:gravity">center</item>
         <item name="android:background">@drawable/bacg_big_box</item>
     </style>
+
+    <style name="TextResultStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="fontFamily">@font/ar</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bacg_big_box</item>
+    </style>
+
 
     <style name="BoxMoreStyle">
         <item name="android:layout_height">50dp</item>

@@ -8,8 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.dev.imuslim.R
 import com.dev.imuslim.databinding.FragmentMoreBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MoreFragment : Fragment() {
     private lateinit var binding: FragmentMoreBinding
 

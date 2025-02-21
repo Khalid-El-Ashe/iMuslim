@@ -49,8 +49,4 @@ class StoriesFriendsFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
         }
     }
-
-    companion object {
-        private const val TAG = "StoriesFriendsFragment"
-    }
 }

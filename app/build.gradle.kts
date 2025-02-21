@@ -2,19 +2,20 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
-    id("kotlin-parcelize")
     id("dagger.hilt.android.plugin")
     id("com.google.dagger.hilt.android")
+    id("kotlin-parcelize")
 }
 
 android {
     namespace = "com.dev.imuslim"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.dev.imuslim"
         minSdk = 26
-        targetSdk = 34
+        //noinspection EditedTargetSdkVersion,OldTargetApi
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -58,10 +59,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Dagger Hillt
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
-    implementation (libs.androidx.hilt.lifecycle.viewmodel)
-    kapt (libs.androidx.hilt.compiler)
+    implementation ("com.google.dagger:hilt-android:2.51.1")
+    kapt ("com.google.dagger:hilt-compiler:2.51.1")
 
     // Retrofit & Gson
     implementation(libs.retrofit)
@@ -84,5 +83,5 @@ dependencies {
 }
 
 kapt {
-    correctErrorTypes=true
+    correctErrorTypes = true
 }

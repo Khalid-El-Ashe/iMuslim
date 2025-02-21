@@ -1,9 +1,10 @@
 package com.dev.imuslim.model
 
-import javax.inject.Named
+import com.google.gson.annotations.SerializedName
+
 
 data class QuranStories(
-    @property: Named("") var titleQuranStore: String,
-    @property: Named("") var contentQuranStory: String,
-    @property: Named("") var descriptionQuranStories: String
+    @SerializedName("") var titleQuranStore: String,
+    @SerializedName("") var contentQuranStory: String,
+    @SerializedName("") var descriptionQuranStories: String
 )

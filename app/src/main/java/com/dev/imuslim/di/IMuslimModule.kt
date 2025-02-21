@@ -8,19 +8,18 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object IMuslimModule {
 
-    /** i need to make instance of my Retrofit */
-    @Singleton
+    // i need to make instance of my Retrofit
+    @Singleton // i need to use this annotation to make just once instance for this lib
     @Provides
     fun provideRetrofitInstanceApi(): IMuslimApi {
-        return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BASE_URL)
-            .build().create()
+        return Retrofit.Builder().baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create()).build()
+            .create(IMuslimApi::class.java)
     }
 }

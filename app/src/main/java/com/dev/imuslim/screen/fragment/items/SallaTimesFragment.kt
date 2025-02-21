@@ -28,8 +28,4 @@ class SallaTimesFragment : Fragment() {
             findNavController().popBackStack()
         }
     }
-
-    companion object {
-        private const val TAG = "Blank4Fragment"
-    }
 }

@@ -1,4 +1,4 @@
-package com.dev.imuslim.screen.fragment.items
+package com.dev.imuslim.screen.fragment.more
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -27,9 +27,5 @@ class IslamicOpensFragment : Fragment() {
         binding.iconBack.setOnClickListener {
             findNavController().popBackStack()
         }
-    }
-
-    companion object {
-        private const val TAG = "Blank10Fragment"
     }
 }

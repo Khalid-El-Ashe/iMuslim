@@ -20,7 +20,7 @@ import kotlinx.coroutines.launch
 class DuaFragment : Fragment() {
     private lateinit var binding: FragmentDuaBinding
     private lateinit var duaAdapter: DuaAdapter
-    private val duaViewModel by viewModels<DuaViewModel>()
+//    private val duaViewModel by viewModels<DuaViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -45,13 +45,13 @@ class DuaFragment : Fragment() {
             initRecyclerView()
 
             binding.etSearch.addTextChangedListener {
-                duaViewModel.searchDua(searchQuery = it.toString()) // you need to complete build fun search
+//                duaViewModel.searchDua(searchQuery = it.toString()) // you need to complete build fun search
             }
-            lifecycleScope.launch {
-                duaViewModel.searchQuery.collect {
-                    duaAdapter.diffUtil.submitList(it)
-                }
-            }
+//            lifecycleScope.launch {
+//                duaViewModel.searchQuery.collect {
+//                    duaAdapter.diffUtil.submitList(it)
+//                }
+//            }
         }
     }
 
@@ -61,9 +61,5 @@ class DuaFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = duaAdapter
         }
-    }
-
-    companion object {
-        private const val TAG = "Blank1Fragment"
     }
 }

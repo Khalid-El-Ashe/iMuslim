@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screen.fragment.items.ProphetMohammedFragment">
+    tools:context=".screen.fragment.more.ProphetMohammedFragment">
 
     <TextView
         android:id="@+id/blank9_toolbar"

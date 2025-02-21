@@ -28,8 +28,4 @@ class PrayerCompassFragment : Fragment() {
             findNavController().popBackStack()
         }
     }
-
-    companion object {
-        private const val TAG = "Blank5Fragment"
-    }
 }

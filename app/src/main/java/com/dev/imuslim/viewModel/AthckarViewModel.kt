@@ -3,20 +3,43 @@ package com.dev.imuslim.viewModel
 import androidx.lifecycle.ViewModel
 import com.dev.imuslim.network.IMuslimApi
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
 @HiltViewModel
-class AthckarViewModel(private val iMuslimApi: IMuslimApi) : ViewModel() {
+class AthckarViewModel @Inject constructor(private val iMuslimApi: IMuslimApi) : ViewModel() {
 
-    private val _athckar = MutableStateFlow("")
-    val athckar = _athckar.asStateFlow()
+//    private val _athckar = MutableStateFlow("")
+//    val athckar = _athckar.asStateFlow()
 
-    fun getMorningAthckarData(): String { // can i use Flow<String>
-        return "Morning Athckar"
+//    fun getMorningAthckar(): String {
+//        viewModelScope.launch {
+//            iMuslimApi.readMorning().let {
+//                _athckar.value = it
+//            }
+//        }
+//        return _athckar.value
+//    }
+
+//    fun getEveningAthckar(): String {
+//        viewModelScope.launch {
+//            iMuslimApi.readEvening().let {
+//                _athckar.value = it
+//            }
+//        }
+//        return _athckar.value
+//    }
+
+    fun getMorningAthckar(): Flow<String> {
+        return flow {
+            emit(iMuslimApi.readMorning())
+        }
     }
 
-    fun getEveningAthckarData(): String { // can i use Flow<String>
-        return "Evening Athckar"
+    fun getEveningAthckar(): Flow<String> {
+        return flow {
+            emit(iMuslimApi.readEvening())
+        }
     }
 }

@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class EveningSaysFragment : Fragment() {
     private lateinit var binding: FragmentEveningSaysBinding
-    private val athckarViewModel by viewModels<AthckarViewModel>()
+//    private val athckarViewModel by viewModels<AthckarViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -33,9 +33,11 @@ class EveningSaysFragment : Fragment() {
         }
 
         // i need to get the athckar from api
-        lifecycleScope.launch {
-            binding.tvEvening.text = athckarViewModel.getEveningAthckarData()
-        }
+//        lifecycleScope.launch {
+//            athckarViewModel.getEveningAthckar().collect {
+//                binding.tvEvening.text = it
+//            }
+//        }
     }
 
     companion object {

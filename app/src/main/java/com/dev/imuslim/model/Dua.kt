@@ -1,9 +1,9 @@
 package com.dev.imuslim.model
 
-import javax.inject.Named
+import com.google.gson.annotations.SerializedName
 
 data class Dua(
-    @property: Named("") var duaTitleName: String,
-    @property: Named("") var duaContent: String,
-    @property: Named("") var duaDescription: String
+    @SerializedName("dua_index") val duaIndex: Int,
+    @SerializedName("dua_name") val duaName: String,
+    @SerializedName("dua_content") val duaContent: String,
 )

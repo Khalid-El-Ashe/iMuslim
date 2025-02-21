@@ -17,7 +17,7 @@ class DuaAdapter : RecyclerView.Adapter<DuaAdapter.DuaViewHolder>() {
     // i need to use this diffUtils to listen the changes in this list and more things in backend
     private val _diffUtil = object : DiffUtil.ItemCallback<Dua>() {
         override fun areItemsTheSame(oldItem: Dua, newItem: Dua): Boolean {
-            return oldItem.duaTitleName == newItem.duaTitleName
+            return oldItem.duaName == newItem.duaName
         }
 
         override fun areContentsTheSame(oldItem: Dua, newItem: Dua): Boolean {
@@ -40,8 +40,7 @@ class DuaAdapter : RecyclerView.Adapter<DuaAdapter.DuaViewHolder>() {
     override fun onBindViewHolder(holder: DuaViewHolder, position: Int) {
         val dua = diffUtil.currentList[position]
 
-        holder.binding.tvDuaTitle.text = dua.duaTitleName
-        holder.binding.tvDuaDescription.text = dua.duaDescription
+        holder.binding.tvDuaTitle.text = dua.duaName
 
         holder.binding.duaLayout.setOnClickListener {
             onItemClick.invoke(dua)

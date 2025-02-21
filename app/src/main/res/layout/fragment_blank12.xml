@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/secound_primary"
-    tools:context=".screen.fragment.items.Blank12Fragment">
+    tools:context=".screen.fragment.more.Blank12Fragment">
 
     <TextView
         android:id="@+id/blank12_toolbar"

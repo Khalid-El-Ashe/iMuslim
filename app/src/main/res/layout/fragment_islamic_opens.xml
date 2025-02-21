@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screen.fragment.items.IslamicOpensFragment">
+    tools:context=".screen.fragment.more.IslamicOpensFragment">
 
     <TextView
         android:id="@+id/blank10_toolbar"

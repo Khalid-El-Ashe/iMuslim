@@ -28,8 +28,4 @@ class StoriesQuranKareemFragment : Fragment() {
             findNavController().popBackStack()
         }
     }
-
-    companion object {
-        private const val TAG = "Blank6Fragment"
-    }
 }

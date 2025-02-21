@@ -1,9 +1,9 @@
 package com.dev.imuslim.model
 
-import javax.inject.Named
+import com.google.gson.annotations.SerializedName
 
 data class Hadith(
-    @property: Named("") var hadithTitle: String,
-    @property: Named("") var hadithContent: String,
-    @property: Named("") var hadithDescription: String
+    @SerializedName("") var hadithTitle: String,
+    @SerializedName("") var hadithContent: String,
+    @SerializedName("") var hadithDescription: String
 )

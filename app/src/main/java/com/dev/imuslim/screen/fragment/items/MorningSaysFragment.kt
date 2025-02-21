@@ -1,6 +1,7 @@
 package com.dev.imuslim.screen.fragment.items
 
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +17,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class MorningSaysFragment : Fragment() {
     private lateinit var binding: FragmentMorningSaysBinding
-    private val athckarViewModel by viewModels<AthckarViewModel>()
+//    private val athckarViewModel by viewModels<AthckarViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -27,17 +28,19 @@ class MorningSaysFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.iconBack.setOnClickListener {
             findNavController().popBackStack()
         }
 
-        // i need to get the athckar from api
-        lifecycleScope.launch {
-            binding.tvMorning.text = athckarViewModel.getMorningAthckarData()
-        }
-    }
+        // i need to make the test is scrolling
+        binding.tvMorning.movementMethod = ScrollingMovementMethod()
 
-    companion object {
-        private const val TAG = "Blank2Fragment"
+        // i need to get the athckar from api
+//        lifecycleScope.launch {
+//            athckarViewModel.getMorningAthckar().collect {
+//                binding.tvMorning.text = it
+//            }
+//        }
     }
 }
